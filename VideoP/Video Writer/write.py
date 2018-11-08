@@ -28,7 +28,7 @@ def convert_frames_to_video(pathIn,pathOut,fps):
         #inserting the frames into an image array
         frame_array.append(img)
  
-    out = cv2.VideoWriter(pathOut, 0x00000021, fps, size)
+    out = cv2.VideoWriter(pathOut, cv2.VideoWriter_fourcc(*'X264'), fps, size)
  
     for i in range(len(frame_array)):
         # writing to a image array
@@ -39,7 +39,7 @@ def main():
     pathIn= './data/'
     pathOut = 'video.mp4'
 
-    fps = 20
+    fps = 25.100
 
 
 
